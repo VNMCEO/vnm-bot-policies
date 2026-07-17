@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — VNM Bot</title>
+<style>
+  :root{--bg:#0f1115;--card:#171a21;--fg:#e7e9ee;--muted:#9aa3b2;--accent:#6c8cff;--border:#262b36}
+  @media (prefers-color-scheme: light){
+    :root{--bg:#f5f6f8;--card:#ffffff;--fg:#1a1d24;--muted:#5b6472;--accent:#3a5bff;--border:#e3e6ec}
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:760px;margin:0 auto;padding:56px 20px 80px}
+  .back{color:var(--accent);text-decoration:none;font-size:.9rem}
+  .back:hover{text-decoration:underline}
+  h1{font-size:2rem;margin:1.2rem 0 .2rem}
+  .updated{color:var(--muted);font-size:.9rem;margin:0 0 2rem}
+  h2{font-size:1.25rem;margin:2.2rem 0 .6rem;padding-top:.4rem;border-top:1px solid var(--border)}
+  p,li{color:var(--fg)}
+  ul{padding-left:1.2rem}
+  li{margin:.3rem 0}
+  strong{font-weight:650}
+  a{color:var(--accent)}
+  .note{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 18px;color:var(--muted);font-size:.95rem}
+  .foot{color:var(--muted);font-size:.85rem;margin-top:3rem;border-top:1px solid var(--border);padding-top:1.2rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../">← VNM Bot policies</a>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: July 17, 2026</p>
+
+  <p>This Privacy Policy explains how the <strong>VNM Bot</strong> ("the bot") handles
+  information when it is used in a Discord server. The bot is operated by <strong>VNM</strong>
+  ("we", "us"). If you have questions or requests, contact us at
+  <a href="mailto:vnmbusiness@gmail.com">vnmbusiness@gmail.com</a>.</p>
+
+  <h2>Information the bot accesses</h2>
+  <p>To provide its features, the bot accesses the following data from Discord:</p>
+  <ul>
+    <li><strong>Account identifiers</strong> — Discord user IDs, usernames, and avatars.</li>
+    <li><strong>Server &amp; role data</strong> — the members of a server and their roles, so the bot can perform role and channel management.</li>
+    <li><strong>Message content of commands</strong> — the bot reads messages that begin with its command prefix (<code>!</code>) so it can respond to commands. It does not read or store ordinary conversation.</li>
+    <li><strong>Voice channel presence</strong> — which voice channels have members and how many, used for voice-channel tracking.</li>
+    <li><strong>Direct messages it sends</strong> — the bot may send direct messages (for example, notifications to team captains).</li>
+  </ul>
+
+  <h2>What we store, and where</h2>
+  <ul>
+    <li><strong>Operational logs</strong> — the bot keeps short-lived logs on its host machine recording actions taken and the Discord user ID/username involved, for debugging and abuse prevention. These logs rotate and are overwritten automatically.</li>
+    <li><strong>Voice-channel tracking (Google Sheets)</strong> — when the voice-tracking feature is used, only <strong>aggregate</strong> data is written to a Google Sheet: the voice channel name and the number of people in it. No individual member identities are written.</li>
+    <li><strong>Tournament / event configuration</strong> — settings for tournaments and events created through the bot are stored as local configuration files on the host.</li>
+    <li><strong>Game statistics</strong> — when a stats command is used, player statistics are fetched live from a third-party game-stats service and shown in Discord. The bot does not build or keep player profiles.</li>
+  </ul>
+  <p class="note">The bot does not collect payment information, does not read private messages sent to it beyond command handling, and does not sell data or use it for advertising.</p>
+
+  <h2>Third-party services</h2>
+  <p>The bot relies on a small number of services to function:</p>
+  <ul>
+    <li><strong>Discord</strong> — the platform the bot operates on, governed by Discord's own <a href="https://discord.com/privacy">Privacy Policy</a>.</li>
+    <li><strong>Google (Sheets &amp; Drive)</strong> — used to record aggregate voice-channel data and to export tournament files.</li>
+    <li><strong>A third-party game-stats provider</strong> — queried live when a stats command is used.</li>
+  </ul>
+
+  <h2>Data retention</h2>
+  <p>Operational logs rotate and are overwritten automatically. Voice-channel data in
+  Google Sheets is overwritten on each update. Tournament/event configuration is kept
+  only as long as it is needed to run the relevant event. We do not retain data longer
+  than necessary for the bot to function.</p>
+
+  <h2>Your choices and deletion requests</h2>
+  <p>You can request that we delete data associated with you or your server, or ask a
+  question about your data, by emailing
+  <a href="mailto:vnmbusiness@gmail.com">vnmbusiness@gmail.com</a>. Removing the bot from
+  a server stops all further data access for that server.</p>
+
+  <h2>Children</h2>
+  <p>The bot is not directed to children. Use of Discord and the bot is subject to
+  Discord's minimum age requirements.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>We may update this Privacy Policy from time to time. When we do, we will revise the
+  "Last updated" date at the top of this page.</p>
+
+  <div class="foot">Operated by VNM · Contact <a href="mailto:vnmbusiness@gmail.com">vnmbusiness@gmail.com</a></div>
+</div>
+</body>
+</html>

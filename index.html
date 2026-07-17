@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VNM Bot — Policies</title>
+<style>
+  :root{--bg:#0f1115;--card:#171a21;--fg:#e7e9ee;--muted:#9aa3b2;--accent:#6c8cff;--border:#262b36}
+  @media (prefers-color-scheme: light){
+    :root{--bg:#f5f6f8;--card:#ffffff;--fg:#1a1d24;--muted:#5b6472;--accent:#3a5bff;--border:#e3e6ec}
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;padding:0}
+  .wrap{max-width:720px;margin:0 auto;padding:64px 20px}
+  h1{font-size:1.9rem;margin:0 0 .3rem}
+  .lede{color:var(--muted);margin:0 0 2.5rem}
+  .cards{display:grid;gap:16px}
+  a.card{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 22px;transition:border-color .15s,transform .15s}
+  a.card:hover{border-color:var(--accent);transform:translateY(-1px)}
+  a.card h2{margin:0 0 .3rem;font-size:1.15rem}
+  a.card p{margin:0;color:var(--muted);font-size:.95rem}
+  .foot{color:var(--muted);font-size:.85rem;margin-top:3rem}
+  .foot a{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>VNM Bot</h1>
+  <p class="lede">Policies for the VNM Discord bot.</p>
+  <div class="cards">
+    <a class="card" href="privacy-policy/">
+      <h2>Privacy Policy →</h2>
+      <p>What data the bot accesses, how it's used, and how to request deletion.</p>
+    </a>
+    <a class="card" href="terms-of-service/">
+      <h2>Terms of Service →</h2>
+      <p>Acceptable use and the terms for using the bot.</p>
+    </a>
+  </div>
+  <p class="foot">Operated by VNM · Contact <a href="mailto:vnmbusiness@gmail.com">vnmbusiness@gmail.com</a></p>
+</div>
+</body>
+</html>
