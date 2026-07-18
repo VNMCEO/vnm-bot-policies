@@ -49,7 +49,7 @@
 
   <h2>What we store, and where</h2>
   <ul>
-    <li><strong>Operational logs</strong> — the bot keeps short-lived logs on its host machine recording actions taken and the Discord user ID/username involved, for debugging and abuse prevention. These logs rotate and are overwritten automatically.</li>
+    <li><strong>Operational logs</strong> — the bot keeps logs on its host machine recording actions taken and the Discord user ID/username involved, for debugging and abuse prevention. These logs are stored securely and are deleted when no longer needed; you may request deletion at any time.</li>
     <li><strong>Voice-channel tracking (Google Sheets)</strong> — when the voice-tracking feature is used, only <strong>aggregate</strong> data is written to a Google Sheet: the voice channel name and the number of people in it. No individual member identities are written.</li>
     <li><strong>Tournament / event configuration</strong> — settings for tournaments and events created through the bot are stored as local configuration files on the host.</li>
     <li><strong>Game statistics</strong> — when a stats command is used, player statistics are fetched live from a third-party game-stats service and shown in Discord. The bot does not build or keep player profiles.</li>
@@ -65,10 +65,11 @@
   </ul>
 
   <h2>Data retention</h2>
-  <p>Operational logs rotate and are overwritten automatically. Voice-channel data in
-  Google Sheets is overwritten on each update. Tournament/event configuration is kept
-  only as long as it is needed to run the relevant event. We do not retain data longer
-  than necessary for the bot to function.</p>
+  <p>Operational logs are retained on the host machine for debugging and abuse
+  prevention and are deleted when no longer needed. Voice-channel data in Google Sheets
+  is overwritten on each update. Tournament/event configuration is kept only as long as
+  it is needed to run the relevant event. You may request deletion of your data at any
+  time (see below).</p>
 
   <h2>Your choices and deletion requests</h2>
   <p>You can request that we delete data associated with you or your server, or ask a
