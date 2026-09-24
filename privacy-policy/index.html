@@ -30,7 +30,7 @@
 <div class="wrap">
   <a class="back" href="../">← VNM Bot policies</a>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: July 17, 2026</p>
+  <p class="updated">Last updated: September 23, 2026</p>
 
   <p>This Privacy Policy explains how the <strong>VNM Bot</strong> ("the bot") handles
   information when it is used in a Discord server. The bot is operated by <strong>VNM</strong>
@@ -42,38 +42,49 @@
   <ul>
     <li><strong>Account identifiers</strong> — Discord user IDs, usernames, and avatars.</li>
     <li><strong>Server &amp; role data</strong> — the members of a server and their roles, so the bot can perform role and channel management.</li>
-    <li><strong>Commands and inputs</strong> — the bot works through Discord slash commands and also reads message content when you send a command or type a value it asked for (such as a time, a map list, or role IDs) so it can act on it. It does not read or store ordinary conversation.</li>
+    <li><strong>Commands and inputs</strong> — the bot works through Discord slash commands, direct messages, and messages that explicitly mention or reply to the bot. It processes the command text or requested follow-up value so it can perform the requested action.</li>
+    <li><strong>Tournament archive content</strong> — when an authorized server administrator explicitly confirms tournament teardown or creator offboarding, the bot reads messages, embeds, reactions, and attachments from the temporary tournament channels being removed so it can create an administrative event archive.</li>
+    <li><strong>Administrator-requested AI assistance</strong> — an allowlisted event administrator may explicitly ask the bot's <code>$&amp;</code> assistant to analyze tournament operations. For that request, the bot may read recent messages from a channel the administrator identifies and send the request and relevant results to the AI provider for processing. This feature is not available to ordinary users and is not used to train a VNM model.</li>
+    <li><strong>Administrative message audits</strong> — a user with Discord's Manage Messages permission may explicitly request a limited recent-message view from a channel that user is already permitted to view. The bot checks the user's channel permissions before returning any content.</li>
     <li><strong>Voice channel presence</strong> — which voice channels have members and how many, used for voice-channel tracking.</li>
     <li><strong>Direct messages it sends</strong> — the bot may send direct messages (for example, notifications to team captains).</li>
+    <li><strong>Direct-message support</strong> — DMs that a user sends to the bot, including follow-up replies and attachments, are copied to a designated staff-only Discord channel so authorized VNM staff can provide support. Staff replies sent through that inbox are delivered to the user by the bot.</li>
   </ul>
 
   <h2>What we store, and where</h2>
   <ul>
     <li><strong>Operational logs</strong> — the bot keeps logs on its host machine recording actions taken and the Discord user ID/username involved, for debugging and abuse prevention. These logs are stored securely and are deleted when no longer needed; you may request deletion at any time.</li>
-    <li><strong>Voice-channel tracking (Google Sheets)</strong> — when the voice-tracking feature is used, only <strong>aggregate</strong> data is written to a Google Sheet: the voice channel name and the number of people in it. No individual member identities are written.</li>
+    <li><strong>Google Sheets operations</strong> — voice tracking writes aggregate channel names and member counts. When authorized staff explicitly use roster, role-export, code-delivery, or event-sync features, the bot may also read or write Discord display names, usernames, role names, event assignments, and operation timestamps in the staff-selected spreadsheet.</li>
     <li><strong>Tournament / event configuration</strong> — settings for tournaments and events created through the bot are stored as local configuration files on the host.</li>
+    <li><strong>Tournament archives (Google Drive)</strong> — after an authorized administrator confirms teardown or offboarding, the bot stores a transcript and copies of attachments from the affected temporary event channels in a private Google Drive archive controlled by VNM. The bot does not archive unrelated server channels.</li>
+    <li><strong>AI-assistant audit records</strong> — the host keeps a size-limited rolling audit log of allowlisted administrator requests, action summaries, Discord identifiers, and approval results for security and debugging. AI session data may also be processed and retained by the AI provider under its applicable terms and privacy policy.</li>
+    <li><strong>DM support records (Discord)</strong> — incoming bot DMs and staff replies are retained in VNM's designated staff-only Discord support channel until staff delete them or the channel's retention practices remove them.</li>
     <li><strong>Game statistics</strong> — when a stats command is used, player statistics are fetched live from a third-party game-stats service and shown in Discord. The bot does not build or keep player profiles.</li>
   </ul>
-  <p class="note">The bot does not collect payment information, does not read private messages sent to it beyond command handling, and does not sell data or use it for advertising.</p>
+  <p class="note">The bot does not collect payment information and does not sell data or use it for advertising. Direct messages sent to the bot are handled as described above for commands and staff support.</p>
 
   <h2>Third-party services</h2>
   <p>The bot relies on a small number of services to function:</p>
   <ul>
     <li><strong>Discord</strong> — the platform the bot operates on, governed by Discord's own <a href="https://discord.com/privacy">Privacy Policy</a>.</li>
     <li><strong>Google (Sheets &amp; Drive)</strong> — used to record aggregate voice-channel data and to export tournament files.</li>
+    <li><strong>Anthropic (Claude)</strong> — processes requests made through the allowlisted <code>$&amp;</code> administrative assistant and the server data needed to answer those requests, governed by Anthropic's <a href="https://www.anthropic.com/legal/privacy">Privacy Policy</a>.</li>
     <li><strong>A third-party game-stats provider</strong> — queried live when a stats command is used.</li>
   </ul>
 
   <h2>Data retention</h2>
   <p>Operational logs are retained on the host machine for debugging and abuse
   prevention and are deleted when no longer needed. Voice-channel data in Google Sheets
-  is overwritten on each update. Tournament/event configuration is kept only as long as
-  it is needed to run the relevant event. You may request deletion of your data at any
-  time (see below).</p>
+  is overwritten on each update; other staff-requested spreadsheet data is retained until
+  the spreadsheet owner deletes or replaces it. Active tournament/event configuration is kept only as
+  long as it is needed to run the relevant event. Tournament archives are retained in
+  VNM's private Google Drive for administrative event records until the event organizer
+  requests deletion or VNM determines the archive is no longer needed. You may request
+  deletion of your data at any time (see below).</p>
 
   <h2>Your choices and deletion requests</h2>
-  <p>You can request that we delete data associated with you or your server, or ask a
-  question about your data, by emailing
+  <p>You can request that we delete data associated with you or your server—including
+  content contained in a tournament archive—or ask a question about your data, by emailing
   <a href="mailto:vnmbusiness@gmail.com">vnmbusiness@gmail.com</a>. Removing the bot from
   a server stops all further data access for that server.</p>
 
