@@ -44,7 +44,6 @@
     <li><strong>Server &amp; role data</strong> — the members of a server and their roles, so the bot can perform role and channel management.</li>
     <li><strong>Commands and inputs</strong> — the bot works through Discord slash commands, direct messages, and messages that explicitly mention or reply to the bot. It processes the command text or requested follow-up value so it can perform the requested action.</li>
     <li><strong>Tournament archive content</strong> — when an authorized server administrator explicitly confirms tournament teardown or creator offboarding, the bot reads messages, embeds, reactions, and attachments from the temporary tournament channels being removed so it can create an administrative event archive.</li>
-    <li><strong>Administrator-requested AI assistance</strong> — an allowlisted event administrator may explicitly ask the bot's <code>$&amp;</code> assistant to analyze tournament operations. For that request, the bot may read recent messages from a channel the administrator identifies and send the request and relevant results to the AI provider for processing. This feature is not available to ordinary users and is not used to train a VNM model.</li>
     <li><strong>Administrative message audits</strong> — a user with Discord's Manage Messages permission may explicitly request a limited recent-message view from a channel that user is already permitted to view. The bot checks the user's channel permissions before returning any content.</li>
     <li><strong>Voice channel presence</strong> — which voice channels have members and how many, used for voice-channel tracking.</li>
     <li><strong>Direct messages it sends</strong> — the bot may send direct messages (for example, notifications to team captains).</li>
@@ -57,7 +56,6 @@
     <li><strong>Google Sheets operations</strong> — voice tracking writes aggregate channel names and member counts. When authorized staff explicitly use roster, role-export, code-delivery, or event-sync features, the bot may also read or write Discord display names, usernames, role names, event assignments, and operation timestamps in the staff-selected spreadsheet.</li>
     <li><strong>Tournament / event configuration</strong> — settings for tournaments and events created through the bot are stored as local configuration files on the host.</li>
     <li><strong>Tournament archives (Google Drive)</strong> — after an authorized administrator confirms teardown or offboarding, the bot stores a transcript and copies of attachments from the affected temporary event channels in a private Google Drive archive controlled by VNM. The bot does not archive unrelated server channels.</li>
-    <li><strong>AI-assistant audit records</strong> — the host keeps a size-limited rolling audit log of allowlisted administrator requests, action summaries, Discord identifiers, and approval results for security and debugging. AI session data may also be processed and retained by the AI provider under its applicable terms and privacy policy.</li>
     <li><strong>DM support records (Discord)</strong> — incoming bot DMs and staff replies are retained in VNM's designated staff-only Discord support channel until staff delete them or the channel's retention practices remove them.</li>
     <li><strong>Game statistics</strong> — when a stats command is used, player statistics are fetched live from a third-party game-stats service and shown in Discord. The bot does not build or keep player profiles.</li>
   </ul>
@@ -68,7 +66,6 @@
   <ul>
     <li><strong>Discord</strong> — the platform the bot operates on, governed by Discord's own <a href="https://discord.com/privacy">Privacy Policy</a>.</li>
     <li><strong>Google (Sheets &amp; Drive)</strong> — used to record aggregate voice-channel data and to export tournament files.</li>
-    <li><strong>Anthropic (Claude)</strong> — processes requests made through the allowlisted <code>$&amp;</code> administrative assistant and the server data needed to answer those requests, governed by Anthropic's <a href="https://www.anthropic.com/legal/privacy">Privacy Policy</a>.</li>
     <li><strong>A third-party game-stats provider</strong> — queried live when a stats command is used.</li>
   </ul>
 
